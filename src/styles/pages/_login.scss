@@ -1,0 +1,95 @@
+.login-container {
+
+    .login-forms-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10vh;
+
+        .login-form {
+            border: 1px solid rgb(219, 219, 219);
+            border-radius: 13px;
+            box-shadow: 0 0 0 black;
+            width: 30vw;
+
+            @include for-mobile-layout {
+                width: 80vw;
+            }
+            @include for-tablet-layout {
+                width: 60vw;
+            }
+            @include for-narrow-layout {
+                width: 50vw;
+            }
+            @include for-normal-layout {
+                width: 30vw;
+            }
+
+            .login-form-header {
+                text-align: center;
+                border-bottom: 1px solid rgb(219, 219, 219);
+                width: 100%;
+                padding: 15px 20px;
+
+                h2 {
+                    font-size: rem(16px);
+                }
+            }
+
+            .login-form-body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 25px;
+
+                h1 {
+                    align-self: flex-start;
+                    padding-bottom: 25px;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 20px;
+                    border: 1px solid rgb(182, 182, 182);
+
+                    &:first-of-type {
+                        border-top-left-radius: 13px;
+                        border-top-right-radius: 13px;
+                    }
+
+                    &:not(:last-of-type){
+                        border-bottom: none;
+                    }
+
+                    &:last-of-type {
+                        border-bottom-left-radius: 13px;
+                        border-bottom-right-radius: 13px;
+                    }
+                }
+
+                .login-btn {
+                    width: 100%;
+                    background-color: $clr-brand;
+                    padding: 15px;
+                    margin: 20px 0px;
+                    border-radius: 13px;
+                    color: $clr-light;
+                    font-weight: 600;
+                }
+
+                .login-actions-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    button {
+                        font-weight: 600;
+                        font-size: rem(14px);
+                        color: $clr-dark;
+                    }
+                }
+            }
+        }
+    }
+}

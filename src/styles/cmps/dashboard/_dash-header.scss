@@ -1,0 +1,119 @@
+.dash-header {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    > div {
+        background-color: $clr-light;
+        min-width: 200px;
+        border-radius: 13px;
+        padding: 20px;
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h3 {
+            font-size: 16px;
+            line-height: 18px;
+            color: $clr-black;
+            font-family: airbnb-book, sans-serif;
+            padding-bottom: 20px;
+        }
+
+        span {
+            font-size: 24px;
+            line-height: 24px;
+            color: $clr-black;
+            font-family: airbnb-regular, sans-serif;
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: 14px;
+                color: $clr-brand;
+                padding-inline-end: 3px;
+            }
+        }
+
+        .circle-container {
+            align-self: flex-end;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 15px;
+            flex: 1;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 16px;
+                font-family: airbnb-bold, sans-serif;
+            }
+
+            .circle {
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+
+                &.circle-green {
+                    background-color: rgb(157, 248, 157);
+                }
+                &.circle-yellow {
+                    background-color: rgb(250, 248, 123);
+                }
+                &.circle-red {
+                    background-color: rgb(250, 123, 123);
+                }
+            }
+        }
+
+        &:first-child {
+            p {
+                font-size: 14px;
+                line-height: 16px;
+                font-family: airbnb-bold, sans-serif;
+                color: rgb(34, 192, 34);
+
+                i {
+                    color: rgb(34, 192, 34);
+                    padding-inline-start: 5px;
+                }
+            }
+        }
+
+        &:last-child {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            > div:first-child {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            > div:last-child {
+                align-self: flex-end;
+
+                display: flex;
+                align-items: flex-end;
+            }
+
+            img {
+                align-self: center;
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+            }
+        }
+    }
+}

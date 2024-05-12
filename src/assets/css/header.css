@@ -1,0 +1,14 @@
+.header-container {
+    background-color: aqua;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-container a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}

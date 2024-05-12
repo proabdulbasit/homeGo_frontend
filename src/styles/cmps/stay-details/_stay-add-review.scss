@@ -1,0 +1,126 @@
+.stay-add-review {
+    border-top: 1px solid rgb(221, 221, 221);
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: 22px;
+        line-height: 26px;
+        color: $clr-black;
+        font-family: airbnb-regular, sans-serif;
+        padding-bottom: 20px;
+    }
+
+    .add-review-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 0px;
+
+        img {
+            object-fit: contain;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        h3 {
+            font-size: 16px;
+            line-height: 20px;
+            font-family: airbnb-regular, sans-serif;
+            color: $clr-black;
+        }
+
+        h4 {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: airbnb-book, sans-serif;
+            color: $clr-gray;
+        }
+    }
+
+    .stay-add-review-ctgs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 100px;
+        width: 100%;
+        margin-top: 20px;
+
+        .ctg-statistics {
+            display: flex;
+            justify-content: space-between;
+
+            label {
+                font-size: 16px;
+                line-height: 20px;
+                color: $clr-black;
+            }
+        }
+        
+    }
+    @include for-mobile-layout {
+        .stay-add-review-ctgs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+    @include for-tablet-layout {
+        .stay-add-review-ctgs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+      
+    }
+    @include for-normal-layout {
+        .stay-add-review-ctgs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 100px;
+            width: 100%;
+            margin-top: 20px;
+    
+            .ctg-statistics {
+                display: flex;
+                justify-content: space-between;
+    
+                label {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $clr-black;
+                }
+            }
+            
+        }
+    }
+
+    .add-review-txt {
+        textarea {
+            margin: 20px 0px;
+            padding: 20px;
+            font-size: inherit;
+            font-family: inherit;
+            width: 100%;
+            height: 150px;
+            resize: none;
+            border-radius: 13px;
+            border-color: rgb(189, 188, 188);
+           
+        }
+
+        button {
+            background-color: $clr-brand;
+            background-image: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+            padding: 7px 40px;
+            border-radius: 5px;
+            color: white;
+            font-size: rem(14px);
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+    }
+}

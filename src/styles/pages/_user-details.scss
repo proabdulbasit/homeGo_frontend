@@ -1,0 +1,176 @@
+.user-details {
+    padding: 20px 15vw;
+
+    @include for-mobile-layout {
+        padding: 20px 0vw;
+    }
+    @include for-tablet-layout {
+        padding: 20px 2vw;
+    }
+    @include for-narrow-layout {
+        padding: 20px 15vw;
+    }
+    @include for-normal-layout {
+        padding: 20px 15vw;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 36px;
+        color: $clr-dark;
+        font-family: airbnb-bold, sans-serif;
+        padding-bottom: 70px;
+    }
+
+    .main-user-details {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+
+        @include for-mobile-layout {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        @include for-tablet-layout {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        @include for-narrow-layout {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50px;
+        }
+        @include for-normal-layout {
+            flex-direction: row;
+            gap: 100px;
+        }
+
+        .user-details-info {
+            flex: 1;
+
+            > * {
+                &:not(button) {
+                    border-bottom: 1px solid rgb(224, 224, 224);
+                }
+               
+                &:not(:first-child) {
+                    padding-top: 30px;
+                }
+
+                &.user-info-header{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    border-bottom: unset;
+
+                    h4{
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+
+                    p{
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        text-transform: unset;
+                    }
+                }
+
+                h4 {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $clr-dark;
+                    text-transform: capitalize;
+                    font-family: airbnb-regular, sans-serif;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $clr-dark;
+                    text-transform: capitalize;
+                    font-family: airbnb-book, sans-serif;
+                    padding-top: 10px;
+                    padding-bottom: 30px;
+                }
+
+                img{
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 8px;
+                }
+            }
+            button {
+                font-size: 16px;
+                line-height: 22px;
+                color: #008489;
+                text-transform: capitalize;
+                font-family: airbnb-regular, sans-serif;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &.user-edit {
+                input {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $clr-dark;
+                    text-transform: capitalize;
+                    font-family: airbnb-book, sans-serif;
+                    padding: 0 0;
+                    margin: 0 0;
+                    border: none;
+                    border-radius: unset;
+                    box-shadow: 0px 1px 0 0px rgb(224, 224, 224);
+                }
+            }
+        }
+
+        .general-info-container {
+            height: 525px;
+            width: 335px;
+            border: 1px solid rgb(224, 224, 224);
+            padding: 25px;
+
+            h3 {
+                font-size: 18px;
+                line-height: 26px;
+                color: $clr-dark;
+                text-transform: capitalize;
+                font-family: airbnb-bold, sans-serif;
+                padding-top: 15px;
+                padding-bottom: 10px;
+            
+            }
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                color: $clr-dark;
+                font-family: airbnb-book, sans-serif;
+                padding-bottom: 40px;
+            }
+
+            img {
+                width: 60px;
+                object-fit: contain;
+            }
+
+            @include for-mobile-layout {
+                height: 100%;
+                width: 100%;
+            }
+            @include for-tablet-layout {
+                height: 100%;
+                width: 100%;
+            }
+            @include for-narrow-layout {
+                height: 525px;
+                width: 335px;
+            }
+        
+        }
+    }
+}

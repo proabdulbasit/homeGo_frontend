@@ -1,0 +1,23 @@
+.home-page {
+    h1 {
+        font-size: rem(28px);
+        font-family: airbnb-bold, sans-serif;
+        color: $clr-black;
+    }
+
+    .filter-gallery-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        a{
+            font-size: rem(13px);
+            font-family: airbnb-book, sans-serif;
+            color: $clr-dark;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,308 @@
+.stay-edit-container {
+    padding: 20px;
+
+    .stay-edit-form {
+        .stay-edit-header {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .stay-edit-header-name {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                .remove-btn{
+                    display: flex;
+                    align-items: center;
+                    background-color: $clr-brand;
+                    padding: 7px 40px;
+                    border-radius: 5px;
+                    color: white;
+                    font-size: rem(14px);
+                    font-weight: 600;
+                    margin-top: 20px;
+
+                    i{
+                        padding-bottom: px;
+                    }
+                }
+
+                h1 {
+                    input {
+                        font-family: airbnb-regular, sans-serif;
+                        font-size: rem(23.5px);
+                        line-height: rem(27px);
+                        color: $clr-black;
+                        margin: 0 0;
+                    }
+                }
+            }
+
+            .stay-edit-short-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 13px;
+                text-transform: capitalize;
+                font-family: airbnb-regular;
+                letter-spacing: -0.3px;
+
+                .stay-rate-display {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    .rate-placeholder {
+                        background-color: rgb(228, 228, 228);
+                        border-radius: 5px;
+                        width: 200px;
+                        height: 20px;
+                    }
+                }
+                div {
+                    p {
+                        text-decoration: underline;
+                        color: rgb(82, 82, 82);
+
+                        input {
+                            width: 300px;
+                        }
+                    }
+                }
+
+                > div:first-of-type {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .stay-save-btn:hover {
+                    .fa-heart {
+                        color: rgb(255, 56, 92);
+                    }
+                }
+            }
+        }
+
+        .stay-gallery {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(250px, 1fr));
+            grid-template-rows: 250px 250px;
+            gap: 8px;
+            padding: 20px 0px;
+
+            .upload-preview {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                color: rgb(53, 53, 53);
+                background-color: rgb(228, 228, 228);
+                font-size: rem(16px);
+                font-weight: 600;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                .img-upload-label {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    top: 20px;
+
+                    .img-upload-btn {
+                        opacity: 0%;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        position: relative;
+                        bottom: 30px;
+                        cursor: pointer;
+                    }
+                }
+
+                input {
+                    border: none;
+                }
+
+                &:first-child {
+                    grid-column: 1 / span 2;
+                    grid-row: 1 / span 2;
+                    border-top-left-radius: 13px;
+                    border-bottom-left-radius: 13px;
+                }
+                &:nth-child(3) {
+                    border-top-right-radius: 13px;
+                }
+                &:nth-child(5) {
+                    border-bottom-right-radius: 13px;
+                }
+            }
+        }
+
+        .stay-edit-info-container {
+            display: flex;
+            gap: 100px;
+
+            .stay-edit-long-info {
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+
+                > *:not(:last-child) {
+                    padding: 20px 0px;
+                    border-bottom: 1px solid rgb(221, 221, 221);
+                }
+
+                .stay-long-info-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-transform: capitalize;
+
+                    img {
+                        object-fit: contain;
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 50%;
+                    }
+
+                    > span:first-of-type {
+                        border-bottom: 1px solid #00000029;
+                    }
+
+                    input.capacity {
+                        width: 50px;
+                    }
+                }
+
+                .stay-feature-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        i {
+                            font-size: 20px;
+                            color: rgb(44, 44, 44);
+                        }
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+
+                            h3 {
+                                font-weight: 600;
+                                color: rgb(44, 44, 44);
+                            }
+
+                            h4 {
+                                font-weight: 100;
+                                color: rgb(87, 87, 87);
+                            }
+                        }
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .amenities-list {
+                    div {
+                        list-style: none;
+                        padding: 0px;
+
+                        span {
+                            padding: 5px 0px;
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                        }
+                    }
+                }
+            }
+
+            .order-form-container {
+                flex: 1;
+                padding: 30px 0px;
+                input {
+                    font-family: airbnb-book, sans-serif;
+                    font-size: rem(14px);
+                    line-height: rem(18px);
+                    color: $clr-black;
+                    margin: 0 0;
+                    width: 80px;
+                }
+            }
+        }
+
+        .fas,
+        .far {
+            font-size: 0.8rem;
+            padding-inline-end: 5px;
+        }
+
+        .fa-star {
+            color: rgb(255, 56, 92);
+            padding-bottom: 3px;
+        }
+
+        .fa-heart {
+            color: rgb(53, 53, 53);
+        }
+
+        .fa-external-link-alt {
+            color: rgb(53, 53, 53);
+        }
+        .stay-edit-save-btn {
+            background-color: $clr-brand;
+            padding: 7px 40px;
+            border-radius: 5px;
+            color: white;
+            font-size: rem(14px);
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        input {
+            margin: 0px 20px;
+            padding: 5px 10px;
+            border: none;
+            box-shadow: 0 1px 0 0px #00000025;
+        }
+
+        select {
+            margin: 0px 10px;
+            padding: 5px 10px;
+            border: 1px solid rgb(182, 182, 182);
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+            width: 100%;
+            height: 20vh;
+            border: 1px solid rgb(182, 182, 182);
+            border-radius: 5px;
+            margin: 20px 0px;
+            font-size: 16px;
+            line-height: 25px;
+            color: $clr-black;
+            font-family: airbnb-book, sans-serif;
+            padding: 10px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.stay-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 6px;
+
+    button {
+        padding: 10px 20px;
+        border: 1px solid #00000038;
+        border-radius: 20px;
+        margin: 5px;
+        font-size: 14px;
+        transition: 0.3s;
+
+        &:first-of-type {
+            margin: 10px 10px 10px 0px;
+        }
+
+        &:hover {
+            border: 1px solid #000000c7;
+        }
+    }
+
+    @include for-mobile-layout {
+        button {
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+    }
+    @include for-tablet-layout {
+        button {
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+    }
+    @include for-narrow-layout {
+        button {
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+    }
+}
