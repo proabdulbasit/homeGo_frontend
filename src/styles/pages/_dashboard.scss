@@ -1,0 +1,87 @@
+.dashboard-container {
+    display: flex;
+    gap: 10px;
+
+    .dash-nav-sticky-container {
+        position: fixed;
+        width: 230px;
+
+        .dash-nav-container {
+            position: sticky;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: start;
+
+            button {
+                padding: 10px 5px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                gap: 15px;
+                font-family: airbnb-regular, sans-serif;
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+                font-size: 16px;
+                line-height: 28px;
+
+                &:hover{
+                    background-color: rgb(247, 247, 247);
+                }
+
+                .fas {
+                    text-align: center;
+                    font-size: 20px;
+                    width: 30px;
+                }
+             
+            }
+        }
+
+        .host-info-container{
+            height: 100%;
+            width: 220px;
+            border: 1px solid rgb(224, 224, 224);
+            margin-top: 30px;
+            padding: 20px;
+
+            h2 {
+                font-size: 18px;
+                line-height: 26px;
+                color: $clr-dark;
+                text-transform: capitalize;
+                font-family: airbnb-bold, sans-serif;
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                color: $clr-dark;
+                font-family: airbnb-book, sans-serif;
+            }
+
+            img {
+                width: 40px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .dash-main-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #eff3f5;
+        padding: 20px;
+        margin-inline-start: 240px;
+        border-radius: 13px;
+
+        .dash-info-container {
+            flex: 4;
+            background-color: $clr-light;
+            border-radius: 13px;
+        }
+    }
+}

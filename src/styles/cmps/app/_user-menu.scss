@@ -1,0 +1,61 @@
+.user-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 13px;
+    padding: 20px 0px;
+    position: absolute;
+    // bottom: 0px;
+    transform: translateX(-50%);
+    // right: 0px;
+    width: 260px;
+    font-size: 16px;
+    text-transform: capitalize;
+    box-shadow: 0 3px 8px 0px #0000002e;
+    z-index: 5;
+
+    > * div:not(:last-child) {
+        border-bottom: 1px solid rgb(221, 221, 221);
+    }
+
+    a {
+        height: 100%;
+        padding: 12px 20px;
+        color: rgb(31, 31, 31);
+    }
+
+    .notif{
+        position: relative;
+        
+        .notif-circle {
+            width: 10px;
+            height: 10px;
+            background-color: $clr-brand;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10%;
+        }
+    }
+
+    button {
+        padding: 0 0;
+        color: rgb(31, 31, 31);
+        font-weight: 100;
+        font-family: airbnb-book, sans-serif;
+        font-size: inherit;
+        width: 100%;
+        height: 100%;
+        text-align: start;
+    }
+
+    a:hover {
+        background-color: rgb(236, 236, 236);
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+}

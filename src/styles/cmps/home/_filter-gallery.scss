@@ -1,0 +1,54 @@
+.filter-gallery {
+    display: flex;
+    gap: 17px;
+    margin-top: 20px;
+    margin-bottom: 75px;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        height: 100%;
+        width: 100%;
+
+        @include for-mobile-layout {
+            &:nth-child(4){
+                display: none;
+            }
+            &:nth-child(3){
+                display: none;
+            }
+        }
+        @include for-tablet-layout {
+            &:nth-child(3){
+                display: none;
+            }
+        }
+        @include for-normal-layout {
+            &:nth-child(4){
+                display: flex;
+            }
+            &:nth-child(3){
+                display: flex;
+            }
+        }
+
+        .gallery-preview-img {
+            @include aspect-ratio(1, 1);
+
+            img {
+                object-fit: cover;
+                border-radius: 13px;
+            }
+
+        }
+        h3 {
+            color: $clr-black;
+            font-size: rem(14px);
+            line-height: rem(13px);
+            text-transform: capitalize;
+            font-family: airbnb-regular;
+            text-overflow: ellipsis;
+        }
+    }
+}

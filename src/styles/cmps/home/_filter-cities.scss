@@ -1,0 +1,116 @@
+.top-cities-gallery {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    gap: 20px;
+
+    @include for-mobile-layout {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-gap: 5px 0px;
+
+        .top-cities-card:nth-child(8){
+            display: none;
+        }
+        .top-cities-card:nth-child(7){
+            display: none;
+        }
+        .top-cities-card:nth-child(6){
+            display: none;
+        }
+        .top-cities-card:nth-child(5){
+            display: none;
+        }
+    }
+    @include for-tablet-layout {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        gap: 10px;
+        .top-cities-card:nth-child(8){
+            display: none;
+        }
+        .top-cities-card:nth-child(7){
+            display: none;
+        }
+    }
+    @include for-normal-layout {
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+        gap: 20px;
+        .top-cities-card:nth-child(8){
+            display: flex;
+        }
+        .top-cities-card:nth-child(7){
+            display: flex;
+        }
+    }
+
+    .top-cities-card {
+        display: flex;
+        grid-column: unset;
+        align-items: center;
+        gap: 15px;
+
+        img {
+            object-fit: cover;
+            border-radius: 10px;
+            height: 65px;
+            width: 65px;
+        }
+
+        @include for-mobile-layout {
+            img {
+                border-radius: 5px;
+                height: 40px;
+                width: 40px;
+            }
+        }
+        @include for-tablet-layout {
+            img {
+                border-radius: 7px;
+                height: 55px;
+                width: 55px;
+            }
+        }
+        @include for-normal-layout {
+            img {
+                border-radius: 10px;
+                height: 65px;
+                width: 65px;
+            }
+        }
+
+        .city-details-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: airbnb-regular, sans-serif;
+
+            h3 {
+                font-size: rem(14px);
+                color: $clr-black;
+            }
+            
+            .city-details {
+                display: flex;
+                align-items: center;
+             
+                width: 100%;
+
+                svg{
+                    height: 15px;
+                    width: 30px;
+                }
+                
+                h4 {
+                    font-size: rem(13px);
+                    font-family: airbnb-book, sans-serif;
+                }
+
+            }
+        }
+
+        // h3 {
+        //     color: $clr-black;
+        // }
+    }
+}

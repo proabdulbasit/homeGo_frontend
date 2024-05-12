@@ -1,0 +1,116 @@
+.host-stay-list {
+    .host-stay-list-table {
+        width: 100%;
+        border-spacing: 0px 2px;
+
+        .thead {
+            width: 100%;
+            div {
+                display: flex;
+                width: 100%;
+                span {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding: 10px 30px;
+                    text-align: start;
+                    font-family: airbnb-regular, sans-serif;
+                    color: $clr-black;
+
+                    &.stay-actions {
+                        text-align: center;
+                    }
+                    &:first-of-type {
+                        width: 70px;
+                    }
+                    &:nth-of-type(2) {
+                        width: 150%;
+                        padding-inline-start: 30px;
+                    }
+                }
+            }
+        }
+
+        .tbody {
+            width: 100%;
+            div {
+                display: flex;
+                width: 100%;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    text-align: start;
+                    width: 100%;
+                    padding: 10px 20px;
+                    border-top: 1px solid rgb(223, 223, 223);
+                    font-size: 16px;
+
+                    &.stay-actions {
+                        text-align: center;
+                        align-content: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        width: 100%;
+                        gap: 10px;
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #eff3f5;
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            font-size: 14px;
+                            font-family: airbnb-regular, sans-serif;
+
+                            i {
+                                font-size: 14px;
+                                padding-inline-end: 5px;
+                            }
+                        }
+                    }
+
+                    &:first-of-type {
+                        width: 70px;
+                    }
+
+                    &:nth-of-type(2) {
+                        width: 150%;
+                    }
+
+                    &:last-of-type {
+                        span {
+                            border-bottom: 1px solid rgb(223, 223, 223);
+                        }
+                    }
+
+                    img {
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .empty-msg{
+                font-size: 16px;
+                line-height: 18px;
+                font-family: airbnb-book , sans-serif;
+                text-align: center;
+                width: 100%;
+                border-top: 1px solid rgb(223, 223, 223); 
+                padding: 50px 0px;
+
+                button{
+                    font-size: inherit;
+                    color: inherit;
+                    padding: 0 0;
+                    line-height: inherit;
+                    text-decoration: underline;
+                    font-family: airbnb-regular , sans-serif;
+                }
+            }
+        }
+    }
+}

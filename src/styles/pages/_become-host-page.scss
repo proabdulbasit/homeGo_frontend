@@ -1,0 +1,58 @@
+.bocome-host-container{
+    display: flex;
+    background-color:black;
+    justify-content:space-between;
+    color: white;
+    height: 100vh;
+
+    .hosting-info{ 
+        width: 50vw;  
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            height: 40px;
+            width: 30px;
+            object-fit: contain;
+        }
+    }
+    .hosting-img{
+
+        .logo-icon{ 
+            height: 50px;
+            width: 40px;
+            object-fit: contain;
+            position: absolute;
+            top: 3vh;
+            left:5vw;
+        }
+    }
+    
+    .guests-img{
+        width: 50vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .host-btn{
+        position: absolute;
+        width: 150px;
+        background-color: #ff385c;
+        right: 5vw;
+        bottom: 5vh;
+        border-radius:8px;
+        padding:15px;
+        color: white;
+        font-weight: 500;
+    }
+}

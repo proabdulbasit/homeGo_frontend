@@ -1,0 +1,51 @@
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/typography";
+
+// Basics
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/base";
+@import "basics/buttons";
+
+// Components
+@import "cmps/app/main-header";
+@import "cmps/app/main-footer";
+@import "cmps/app/main-filter";
+@import "cmps/app/user-menu";
+@import "cmps/app/dynamic-modal";
+@import "cmps/app/user-msg";
+@import "cmps/app/loader";
+@import "cmps/home/hero";
+@import "cmps/home/banner";
+@import "cmps/home/filter-gallery";
+@import "cmps/home/filter-cities";
+@import "cmps/explore/stay-filter";
+@import "cmps/explore/stay-list";
+@import "cmps/explore/stay-preview";
+@import "cmps/stay-details/stay-gallery";
+@import "cmps/stay-details/stay-reviews";
+@import "cmps/stay-details/stay-add-review";
+@import "cmps/stay-details/book-stay";
+@import "cmps/stay-details/book-stay-btn";
+@import "cmps/stay-details/stay-map";
+@import "cmps/dashboard/stay_edit";
+@import "cmps/dashboard/host-stay-list";
+@import "cmps/dashboard/host-order-list";
+@import "cmps/dashboard/rate-statistics";
+@import "cmps/dashboard/dash-header";
+
+
+//pages
+@import "pages/home-page";
+@import "pages/explore";
+@import "pages/stay_details";
+@import "pages/user-details";
+@import "pages/become-host-page";
+@import "pages/dashboard";
+@import "pages/notifications";
+@import "pages/orders";
+@import "pages/login";
+

@@ -1,0 +1,118 @@
+.main-hero {
+    display: grid;
+    grid-template-columns:
+        minmax(2rem, 1fr)
+        minmax(auto, 380px)
+        minmax(2rem, 1fr);
+    background-image: url("../../../assets/img/hero.jpeg");
+    height: 86vh;
+    background-size: cover;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+
+
+    @include for-tablet-layout {
+        grid-template-columns:
+            minmax(2rem, 1fr)
+            minmax(auto, $tablet-breakpoint)
+            minmax(2rem, 1fr);
+    }
+    @include for-narrow-layout {
+        grid-template-columns:
+            minmax(2rem, 1fr)
+            minmax(auto, $narrow-breakpoint)
+            minmax(2rem, 1fr);
+    }
+    @include for-normal-layout {
+        grid-template-columns:
+            minmax(2rem, 1fr)
+            minmax(auto, $normal-breakpoint)
+            minmax(2rem, 1fr);
+    }
+    @include for-large-layout {
+        grid-template-columns:
+            minmax(5rem, 1fr)
+            minmax(auto, $large-breakpoint)
+            minmax(5rem, 1fr);
+    }
+    @include for-wide-layout {
+        grid-template-columns:
+            minmax(2rem, 1fr)
+            minmax(auto, $wide-breakpoint)
+            minmax(2rem, 1fr);
+    }
+
+    div {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-bottom: 19vh;
+        gap: 20px;
+        width: 700px;
+
+        h1 {
+            font-family: airbnb-regular, sans-serif;
+            font-size: rem(43px);
+            line-height: rem(47px);
+            letter-spacing: -1px;
+            font-weight: unset;
+            width: 50%;
+            color: $clr-light;
+        }
+
+        button {
+            margin-top: 5px;
+            padding: 0 0;
+
+            a {
+                font-family: airbnb-regular, sans-serif;
+                font-size: rem(13px);
+                line-height: rem(16px);
+                padding: 7.5px 17px;
+                text-transform: capitalize;
+                border: none;
+                border-radius: 8px;
+                background-color: $clr-light;
+                color: $clr-black;
+            }
+        }
+    }
+    @include for-mobile-layout {
+        height: 60vh;
+        div {
+            width: 200px;
+            margin-bottom: 8vh;
+            h1 {
+                font-size: rem(28px);
+                line-height: rem(32px);
+                width: 100%;
+                text-shadow: 0 2px 9px black;
+            }
+        }
+    }
+    @include for-tablet-layout {
+        div {
+            width: 300px;
+            h1 {
+                font-size: rem(30px);
+                line-height: rem(35px);
+                width: 100%;
+                text-shadow: 0 2px 9px black;
+            }
+        }
+    }
+    @include for-normal-layout {
+        div {
+            width: 700px;
+            h1 {
+                font-size: rem(43px);
+                line-height: rem(47px);
+                width: 50%;
+                text-shadow: unset;
+            }
+        }
+    }
+}
